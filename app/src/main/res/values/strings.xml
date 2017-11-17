@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MVPDemo</string>
+    <string name="title_activity_admin">AdminActivity</string>
+    <string name="title_style">样式</string>
+    <string name="title_using">使用</string>
+    <string name="title_practice">实战</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
