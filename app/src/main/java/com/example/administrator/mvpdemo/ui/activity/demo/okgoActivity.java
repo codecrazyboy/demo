@@ -182,13 +182,12 @@ public class okgoActivity extends BaseActivity {
         params.put("count", "1");
         JSONObject jsonObject = new JSONObject(params);
 
-        OkGoPresenter.getDataPresenter(handler_, this, jsonObject);
+        OkGoPresenter.getDataPresenter(handler, this, jsonObject);
     }
 
 
-
-
-    public void handleMessage(Message msg) {
+    @Override
+    protected void handleMsg(Message msg) {
         switch (msg.what) {
             case HandleCord.SUCESS:
                 BaseResponse response= (BaseResponse) msg.obj;
@@ -204,6 +203,6 @@ public class okgoActivity extends BaseActivity {
 
                 break;
         }
-
     }
+
 }

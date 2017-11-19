@@ -30,21 +30,24 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends AppCompatActivity {
 
 
-    public static Handler handler_ = new Handler();
+    protected abstract void handleMsg(Message msg);
+    protected Handler handler = new Handler() {
+        public void handleMessage(android.os.Message msg) {
+            switch (msg.what) {
+
+                default:
+                    break;
+            }
+            // dismissProgressDialog();
+            handleMsg(msg);
+        };
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initSystemBarTint();
 
-        handler_ = new Handler(new Handler.Callback() {
-            @Override
-            public boolean handleMessage(Message msg) {
-                // TODO Auto-generated method stub
-
-                return false;
-            }
-        });
 
     }
 

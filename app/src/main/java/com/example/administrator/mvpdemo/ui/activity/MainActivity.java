@@ -57,6 +57,12 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
             }
         }
     }
+
+    @Override
+    protected void handleMsg(Message msg) {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
